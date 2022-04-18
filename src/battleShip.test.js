@@ -1,4 +1,4 @@
-import shipFactory from "./battleship";
+import shipFactory from "./shipFactory";
 
 test("hit function test", () => {
   const submarine = shipFactory("submarine", 4);
