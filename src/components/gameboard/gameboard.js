@@ -9,7 +9,11 @@ const Gameboard = (gameboard = []) => {
     }
   };
   if (!board.length) init();
-  return { board };
+
+  function receiveAttack(index) {
+    board[index].isShot = true;
+  }
+  return { board, receiveAttack };
 };
 
 export default Gameboard;

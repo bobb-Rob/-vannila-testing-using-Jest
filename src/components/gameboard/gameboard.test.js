@@ -13,4 +13,9 @@ describe("Gameboard functions", () => {
     }
     expect(testBoard.board).toEqual(arr);
   });
+
+  test("Update cells that receive attack", () => {
+    testBoard.receiveAttack(45);
+    expect(testBoard.board[45].isShot).toBe(true);
+  });
 });
