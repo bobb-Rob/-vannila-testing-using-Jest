@@ -1,4 +1,4 @@
-import ShipFactory from "./shipFactory";
+import ShipFactory from "./shipFactory.js";
 
 describe("ship Factory Functions", () => {
   let submarine;

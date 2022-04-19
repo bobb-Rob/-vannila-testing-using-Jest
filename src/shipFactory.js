@@ -24,4 +24,12 @@ function ShipFactory(name, position) {
 // console.log(subma.position);
 // console.log(subma.isSunk());
 
+let word = "Robert";
+
+let x = 0;
+for (let n = 0; n < 3; n++) {
+  x = x + n;
+}
+console.log(x);
+
 export default ShipFactory;

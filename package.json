@@ -2,8 +2,8 @@
   "name": "jest-beginner",
   "version": "1.0.0",
   "description": "testing trial",
-  "main": "app.js", 
-  "type":"module",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "watch": "jest --watch *.js"
@@ -13,8 +13,16 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^27.5.1",
-    "jest": "^27.5.1"
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^27.5.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
   },
   "dependencies": {
     "axios": "^0.26.1",
