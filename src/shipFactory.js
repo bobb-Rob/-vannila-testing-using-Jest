@@ -1,30 +1,27 @@
-function shipFactory(name, length) {
-  let shipArr = new Array(length);
-  let arrLength = shipArr.length;
+function ShipFactory(name, position) {
+  let hits = [];
 
-  const hit = (position, shipAr) => {
-    if (position >= shipAr.length) {
-      return;
-    } else {
-      shipAr[position] = "hit";
-    }
+  const hit = (position) => {
+    hits.push(position);
   };
 
-  const isSunk = (arr) => {
-    return arr.every((element) => {
-      element === "hit";
+  const isSunk = () => {
+    return position.every((element) => {
+      return hits.includes(element);
     });
   };
 
-  return { name, shipArr, arrLength, hit, isSunk };
+  return { name, position, hits, hit, isSunk };
 }
 
-const destroyer = shipFactory("destoryer", 5);
-console.log(destroyer.shipArr);
-destroyer.hit(1, destroyer.shipArr);
-destroyer.hit(4, destroyer.shipArr);
-destroyer.hit(2, destroyer.shipArr);
-console.log(destroyer.shipArr);
-console.log(destroyer);
+// const subma = ShipFactory("jill", [4, 5, 6, 7, 8]);
+// subma.hit(4);
+// subma.hit(5);
+// subma.hit(6);
+// subma.hit(7);
+// subma.hit(8);
+// console.log(subma.hits);
+// console.log(subma.position);
+// console.log(subma.isSunk());
 
-export default shipFactory;
+export default ShipFactory;
